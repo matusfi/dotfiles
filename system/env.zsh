@@ -1,1 +1,2 @@
-export EDITOR='subl'
+export EDITOR='vi'
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
