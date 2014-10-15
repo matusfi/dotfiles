@@ -9,4 +9,4 @@ then
   alias la='gls -A --color'
 fi
 
-
+alias tcsync='rsync -hrz --stats ~/twig/turniket_core/turniket_core/application hkpoprad:/var/www/turniket_core/turniket_core'
