@@ -1,9 +1,31 @@
-syntax on
+execute pathogen#infect()
+colorscheme badwolf
+syntax enable
+filetype plugin indent on
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+""" TABS and SPACES 
+set tabstop=2		    " number of visual spaces per TAB
+set softtabstop=2   " number of spaces per TAB when editing
+set expandtab		    " tabs are spaces
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
+""" UI
+set number		      " show line numbers
+"set showcmd		    " show last used command
+set wildmenu		    " visual autocomplete for command menu
+set lazyredraw		  " redraw only when needed
+set showmatch		    " highlight matching parens
+
+""" Leader Shortcuts
+let mapleader=","	  " let the leader be comma
+inoremap jk <esc>
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>a :Ag
+nnoremap <leader>p :set paste<CR>
+nnoremap <leader>np :set nopaste<CR>
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'   " order matching files top to to bottom
+let g:ctrlp_switch_buffer = 0         " always open files in new buffers
+let g:ctrlp_working_path_mode = 0     " allow to change working dir while in vim
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'  " use Ag for search
+
